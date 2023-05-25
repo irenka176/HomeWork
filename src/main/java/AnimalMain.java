@@ -27,8 +27,28 @@ public class AnimalMain {
             // apply sum of figures
             sAll = sAll + s;
         }
-
         System.out.println("area of figures: " + sAll);
+
+        // array of Participants
+        Participant participant [] = new Participant[3];
+        Barrier barriers []  = new Barrier[2];
+
+        // added objects to participant array
+        participant[0] = new CatParticipant();
+        participant[1] = new Human();
+        participant[2] = new Robot();
+
+        //added objects to array of barriers
+        barriers[0] = new RunWay();
+        barriers[1]  = new Wall();
+
+        for (int i=0; i < participant.length; i++){
+            Participant p =  participant[i];
+            for(int j=0; j < barriers.length; j++){
+                Barrier b = barriers[j];
+                b.Overcome(p);
+            }
+        }
         }
     }
 
