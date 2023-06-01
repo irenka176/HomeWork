@@ -1,8 +1,8 @@
 public class Participant {
-    void Run(int path){
+    void run(int path){
         System.out.println("base class method run");
     }
-    void Jump(int path){
+    void jump(int path){
         System.out.println("ase class method jump");
     }
 }

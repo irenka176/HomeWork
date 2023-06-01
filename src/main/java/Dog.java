@@ -2,8 +2,8 @@ public class Dog extends Animal{
     int barrierRun = 500;
     int barrierSwim  = 10;
     @Override
-    void Run(int path) {
-        super.Run(path);
+    void run(int path) {
+        super.run(path);
         if (path >= barrierRun){
             System.out.println("Пес больше не пробежит, а то сдохнет");
         }
@@ -14,8 +14,8 @@ public class Dog extends Animal{
     }
 
     @Override
-    void Swim(int path) {
-        super.Swim(path);
+    void swim(int path) {
+        super.swim(path);
         if(path >= barrierSwim){
             System.out.println("Пес больше не проплывет, а то сдохнет");
         }
