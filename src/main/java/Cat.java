@@ -4,8 +4,8 @@ public class Cat extends Animal{
 
 
     @Override
-    void Swim(int path) {
-        super.Swim(path);
+    void swim(int path) {
+        super.swim(path);
         if (path >= barrierSwim){
             System.out.println("Кот не умеет плавать");
         }
@@ -13,8 +13,8 @@ public class Cat extends Animal{
     }
 
     @Override
-    void Run(int path) {
-        super.Run(path);
+    void run(int path) {
+        super.run(path);
         if (path >= barrierRun){
             System.out.println("Кот больше не пробежит, а то сдохнет");
         }
