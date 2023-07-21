@@ -2,10 +2,10 @@ public class Animal {
     public Animal() {
     }
 
-    void Run(int path){
+    void run(int path){
         System.out.println("Базовый класс метод бежать");
     }
-    void Swim(int path){
+    void swim(int path){
         System.out.println("Базовый класс метод плыть");
     }
 
