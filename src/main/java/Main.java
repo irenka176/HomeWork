@@ -1,18 +1,43 @@
 public class Main {
     public static void main(String[] args) {
-        var collectionLesson = new CollectionLesson();
-        var response = collectionLesson.toList(new int[]{1, 2, 3, 4, 5, 6, 7, 7, 9, 10});
-        System.out.println("convert to list " + response);
-        var array = new String[]{"test", "test2", "test3", "test4", "test5", "test6", "test7", "test7", "test9", "test10",
-                "test", "test2", "test3", "test4", "test5", "test6", "test7", "test7"};
-        var request = collectionLesson.toList(array);
-        var count = collectionLesson.countOccurrence(request, "test100");
-        System.out.println("count test100 =  " + count);
-        count = collectionLesson.countOccurrence(request, "test");
-        System.out.println("count test = " + count);
-        count = collectionLesson.countOccurrence(request, "test7");
-        System.out.println("count test7 = " + count);
-        var unique = collectionLesson.findUnique(response);
-        System.out.println("unique values: " + unique);
+        var navigator = new FileNavigator();
+
+        FileData data00;
+        data00 = new FileData();
+        data00.Name = "test.java";
+        data00.Path = "~/lesson6/data/01/";
+        data00.Size = 1024;
+        navigator.add(data00);
+
+        FileData data01;
+        data01 = new FileData();
+        data01.Name = "test01.java";
+        data01.Path = "~/lesson6/data/01/";
+        data01.Size = 1024 / 2;
+        navigator.add(data01);
+
+        FileData data02;
+        data02 = new FileData();
+        data02.Name = "test02.java";
+        data02.Path = "~/lesson6/data/02/";
+        data02.Size = 1024 / 2 / 2;
+        navigator.add(data02);
+
+        //find
+        var path = "~/lesson6/data/01/";
+        var size = 1024 / 2;
+
+        var result = navigator.find(path, size);
+        for (var fileData : result)
+            System.out.println("--find--\nfind files\nfile: " + fileData.Name + "\npath: "
+                    + fileData.Path + "\nsize: " + fileData.Size + "\n------");
+
+        //remove
+        path = "~/lesson6/data/01/";
+        navigator.remove(path);
+        var keys = navigator.Files.keySet();
+        for (var key : keys)
+            System.out.println("--remove--\nfiles in navigator\npath: " + key + "\n--------");
+
     }
 }
